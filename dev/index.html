@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Dev — NurseCalc</title>
+  <link rel="stylesheet" href="/nursecalc-web/assets/style.css">
+  <style>
+    .launch {
+      display: block;
+      background: var(--teal);
+      color: white;
+      padding: 24px;
+      border-radius: var(--radius);
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      border-bottom: none;
+      margin: 32px 0;
+    }
+    .launch:hover { background: var(--teal-dark); border-bottom: none; }
+    .meta {
+      background: var(--cream);
+      color: var(--teal-dark);
+      padding: 16px 20px;
+      border-radius: 8px;
+      font-family: "SF Mono", Menlo, monospace;
+      font-size: 14px;
+      word-break: break-all;
+      margin: 16px 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Open dev server</h1>
+    <p class="updated">Internal — tap the button below to launch the current Expo dev server in Expo Go on this iPhone.</p>
+
+    <a class="launch" href="exp://100.77.30.26:8082">Open in Expo Go →</a>
+
+    <p>If the button doesn't open Expo Go, make sure Expo Go is installed and you're connected to your Tailscale network.</p>
+
+    <h2>Manual URL</h2>
+    <div class="meta">exp://100.77.30.26:8082</div>
+
+    <h2>Other apps</h2>
+    <p>For other portfolio apps, change the path or port:</p>
+    <div class="meta">exp://100.77.30.26:&lt;port&gt;</div>
+
+    <footer>Internal · Not linked from public pages</footer>
+  </main>
+</body>
+</html>
