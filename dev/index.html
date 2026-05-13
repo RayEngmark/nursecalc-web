@@ -10,28 +10,31 @@
   <style>
     body { display: flex; align-items: center; min-height: 100vh; }
     main { width: 100%; }
-    .app-link { display: block; padding: 22px 24px; border-radius: var(--radius); text-decoration: none; border-bottom: none; margin: 14px 0; }
+    .app-link { display: block; padding: 22px 24px; border-radius: var(--radius); text-decoration: none; border-bottom: none; margin: 12px 0; }
     .app-link:hover { border-bottom: none; }
     .app-nursecalc { background: #0A6E6E; } .app-nursecalc:hover { background: #08403F; }
     .app-voltcalc { background: #1A2C45; } .app-voltcalc:hover { background: #0F1B2E; }
     .app-weldcalc { background: #2A2D34; } .app-weldcalc:hover { background: #1A1D24; }
     .app-plumbercalc { background: #1E3A5F; } .app-plumbercalc:hover { background: #152841; }
-    .app-link .name { color: white; font-size: 18px; font-weight: 600; letter-spacing: -0.2px; display: block; }
-    .app-link .sub { color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 4px; display: block; }
+    .app-rollcall { background: #6B1F2A; } .app-rollcall:hover { background: #4A1119; }
+    .app-link .name { color: white; font-size: 17px; font-weight: 600; letter-spacing: -0.2px; display: block; }
+    .app-link .sub { color: rgba(255,255,255,0.7); font-size: 13px; margin-top: 4px; display: block; }
     .app-nursecalc .sub { color: rgba(248,244,232,0.7); }
     .app-voltcalc .sub { color: rgba(184,115,51,0.85); }
     .app-weldcalc .sub { color: rgba(255,107,53,0.85); }
     .app-plumbercalc .sub { color: rgba(212,162,76,0.9); }
+    .app-rollcall .sub { color: rgba(212,175,55,0.9); }
   </style>
 </head>
 <body>
   <main>
     <h1 style="text-align: center; font-size: 26px;">Portfolio Dev</h1>
     <p class="updated" style="text-align: center;">Tap an app to launch its local Expo dev server.</p>
-    <a class="app-link app-nursecalc" href="/nursecalc-web/dev/drip/"><span class="name">NurseCalc · IV Drip Rate</span><span class="sub">port 8082 · /apps/nurse-drip</span></a>
-    <a class="app-link app-voltcalc" href="/nursecalc-web/dev/voltage-drop/"><span class="name">VoltCalc · Voltage Drop</span><span class="sub">port 8083 · /apps/voltage-drop</span></a>
-    <a class="app-link app-weldcalc" href="/nursecalc-web/dev/welder-amperage/"><span class="name">WeldCalc · Stick Welding Amps</span><span class="sub">port 8084 · /apps/welder-amperage</span></a>
-    <a class="app-link app-plumbercalc" href="/nursecalc-web/dev/pipe-sizing/"><span class="name">PlumberCalc · Pipe Sizing</span><span class="sub">port 8085 · /apps/pipe-sizing</span></a>
+    <a class="app-link app-nursecalc" href="/nursecalc-web/dev/drip/"><span class="name">NurseCalc · IV Drip Rate</span><span class="sub">port 8082 · medical</span></a>
+    <a class="app-link app-voltcalc" href="/nursecalc-web/dev/voltage-drop/"><span class="name">VoltCalc · Voltage Drop</span><span class="sub">port 8083 · electrical</span></a>
+    <a class="app-link app-weldcalc" href="/nursecalc-web/dev/welder-amperage/"><span class="name">WeldCalc · Stick Welding Amps</span><span class="sub">port 8084 · welding</span></a>
+    <a class="app-link app-plumbercalc" href="/nursecalc-web/dev/pipe-sizing/"><span class="name">PlumberCalc · Pipe Sizing</span><span class="sub">port 8085 · plumbing</span></a>
+    <a class="app-link app-rollcall" href="/nursecalc-web/dev/initiative-tracker/"><span class="name">RollCall · Initiative Tracker</span><span class="sub">port 8086 · tabletop RPG</span></a>
     <footer style="text-align: center;">Each app has its own home-screen shortcut.</footer>
   </main>
 </body>
