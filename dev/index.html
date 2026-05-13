@@ -3,72 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NurseCalc Dev</title>
-  <meta name="apple-mobile-web-app-title" content="NurseCalc Dev">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Portfolio Dev Launchers</title>
+  <meta name="apple-mobile-web-app-title" content="Dev Launchers">
   <link rel="apple-touch-icon" href="/nursecalc-web/assets/touch-icon.png">
-  <link rel="apple-touch-icon" sizes="512x512" href="/nursecalc-web/assets/touch-icon-512.png">
   <link rel="stylesheet" href="/nursecalc-web/assets/style.css">
   <style>
     body { display: flex; align-items: center; min-height: 100vh; }
     main { width: 100%; }
-    .launch {
+    .app-link {
       display: block;
-      background: var(--teal);
-      color: white;
-      padding: 28px;
+      padding: 22px 24px;
       border-radius: var(--radius);
-      text-align: center;
-      font-size: 21px;
+      text-decoration: none;
+      border-bottom: none;
+      margin: 16px 0;
+    }
+    .app-link:hover { border-bottom: none; }
+    .app-nursecalc { background: #0A6E6E; }
+    .app-nursecalc:hover { background: #08403F; }
+    .app-voltcalc { background: #1A2C45; }
+    .app-voltcalc:hover { background: #0F1B2E; }
+    .app-link .name {
+      color: white;
+      font-size: 18px;
       font-weight: 600;
       letter-spacing: -0.2px;
-      border-bottom: none;
-      margin: 24px 0;
+      display: block;
     }
-    .launch:hover { background: var(--teal-dark); border-bottom: none; }
-    .meta {
-      background: var(--cream);
-      color: var(--teal-dark);
-      padding: 14px 18px;
-      border-radius: 8px;
-      font-family: "SF Mono", Menlo, monospace;
-      font-size: 13px;
-      word-break: break-all;
-      margin: 12px 0;
-    }
-    .status {
-      text-align: center;
-      color: var(--text-muted);
+    .app-link .sub {
+      color: rgba(255,255,255,0.7);
       font-size: 14px;
-      margin: 16px 0 8px;
+      margin-top: 4px;
+      display: block;
     }
+    .app-nursecalc .sub { color: rgba(248,244,232,0.7); }
+    .app-voltcalc .sub { color: rgba(184,115,51,0.85); }
   </style>
 </head>
 <body>
   <main>
-    <h1 style="text-align: center; font-size: 28px;">NurseCalc Dev</h1>
-    <p class="status" id="status">Opening Expo Go…</p>
+    <h1 style="text-align: center; font-size: 26px;">Portfolio Dev</h1>
+    <p class="updated" style="text-align: center;">Tap an app to launch its local Expo dev server.</p>
 
-    <a class="launch" id="launch" href="exp://100.77.30.26:8082">Open in Expo Go</a>
+    <a class="app-link app-nursecalc" href="/nursecalc-web/dev/drip/">
+      <span class="name">NurseCalc · IV Drip Rate</span>
+      <span class="sub">port 8082 · /apps/nurse-drip</span>
+    </a>
 
-    <p style="text-align: center; font-size: 14px; color: var(--text-dim); margin: 8px 0;">If nothing happened, make sure Tailscale is connected and tap the button.</p>
+    <a class="app-link app-voltcalc" href="/nursecalc-web/dev/voltage-drop/">
+      <span class="name">VoltCalc · Voltage Drop</span>
+      <span class="sub">port 8083 · /apps/voltage-drop</span>
+    </a>
 
-    <div class="meta">exp://100.77.30.26:8082</div>
-
-    <footer style="text-align: center;">Tip: tap Share → Add to Home Screen on this page for a one-tap shortcut.</footer>
+    <footer style="text-align: center;">Each app has its own home-screen shortcut. Add this hub page if you want both.</footer>
   </main>
-
-  <script>
-    // Auto-fire the exp:// URL after a brief delay so the page renders first.
-    // If Expo Go isn't installed, the redirect will fail silently and the button remains.
-    setTimeout(() => {
-      window.location.href = 'exp://100.77.30.26:8082';
-    }, 350);
-    // Replace status text after a moment if we're still here (i.e., didn't deep-link)
-    setTimeout(() => {
-      const s = document.getElementById('status');
-      if (s) s.textContent = 'Tap the button to open Expo Go';
-    }, 2500);
-  </script>
 </body>
 </html>

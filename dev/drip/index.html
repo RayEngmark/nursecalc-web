@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NurseCalc Dev</title>
+  <meta name="apple-mobile-web-app-title" content="NurseCalc Dev">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="/nursecalc-web/assets/touch-icon.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="/nursecalc-web/assets/touch-icon-512.png">
+  <link rel="stylesheet" href="/nursecalc-web/assets/style.css">
+  <style>
+    body { display: flex; align-items: center; min-height: 100vh; }
+    main { width: 100%; }
+    .launch {
+      display: block;
+      background: var(--teal);
+      color: white;
+      padding: 28px;
+      border-radius: var(--radius);
+      text-align: center;
+      font-size: 21px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      border-bottom: none;
+      margin: 24px 0;
+    }
+    .launch:hover { background: var(--teal-dark); border-bottom: none; }
+    .meta {
+      background: var(--cream);
+      color: var(--teal-dark);
+      padding: 14px 18px;
+      border-radius: 8px;
+      font-family: "SF Mono", Menlo, monospace;
+      font-size: 13px;
+      word-break: break-all;
+      margin: 12px 0;
+    }
+    .status {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+      margin: 16px 0 8px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 style="text-align: center; font-size: 28px;">NurseCalc Dev</h1>
+    <p class="status" id="status">Opening Expo Go…</p>
+
+    <a class="launch" id="launch" href="exp://100.77.30.26:8082">Open in Expo Go</a>
+
+    <p style="text-align: center; font-size: 14px; color: var(--text-dim); margin: 8px 0;">If nothing happened, make sure Tailscale is connected and tap the button.</p>
+
+    <div class="meta">exp://100.77.30.26:8082</div>
+
+    <footer style="text-align: center;">Tip: tap Share → Add to Home Screen for a one-tap shortcut. · <a href="/nursecalc-web/dev/">All dev launchers</a></footer>
+  </main>
+
+  <script>
+    setTimeout(() => { window.location.href = 'exp://100.77.30.26:8082'; }, 350);
+    setTimeout(() => {
+      const s = document.getElementById('status');
+      if (s) s.textContent = 'Tap the button to open Expo Go';
+    }, 2500);
+  </script>
+</body>
+</html>
