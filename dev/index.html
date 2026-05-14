@@ -24,25 +24,26 @@
     .a10 { background: #2D5F3F; } .a10:hover { background: #1A3D27; }
     .app-link .name { color: white; font-size: 16px; font-weight: 600; letter-spacing: -0.2px; display: block; }
     .app-link .sub { color: rgba(255,255,255,0.7); font-size: 12px; margin-top: 3px; display: block; }
+    .tip { text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 24px; }
   </style>
 </head>
 <body>
   <main>
     <h1 style="text-align: center; font-size: 26px;">Portfolio Dev</h1>
-    <p class="updated" style="text-align: center;">Tap an app to launch its local Expo dev server.</p>
+    <p class="updated" style="text-align: center;">Tap any app to open it in Expo Go on this phone.</p>
 
-    <a class="app-link a1" href="/nursecalc-web/dev/drip/"><span class="name">NurseCalc · IV Drip Rate</span><span class="sub">port 8082 · medical</span></a>
-    <a class="app-link a2" href="/nursecalc-web/dev/voltage-drop/"><span class="name">VoltCalc · Voltage Drop</span><span class="sub">port 8083 · electrical</span></a>
-    <a class="app-link a3" href="/nursecalc-web/dev/welder-amperage/"><span class="name">WeldCalc · Stick Welding Amps</span><span class="sub">port 8084 · welding</span></a>
-    <a class="app-link a4" href="/nursecalc-web/dev/pipe-sizing/"><span class="name">PlumberCalc · Pipe Sizing</span><span class="sub">port 8085 · plumbing</span></a>
-    <a class="app-link a5" href="/nursecalc-web/dev/initiative-tracker/"><span class="name">RollCall · Initiative Tracker</span><span class="sub">port 8086 · tabletop RPG</span></a>
-    <a class="app-link a6" href="/nursecalc-web/dev/brew-ratio/"><span class="name">BrewCalc · Brew Ratio</span><span class="sub">port 8087 · coffee</span></a>
-    <a class="app-link a7" href="/nursecalc-web/dev/depth-of-field/"><span class="name">FocusLens · Depth of Field</span><span class="sub">port 8088 · photography</span></a>
-    <a class="app-link a8" href="/nursecalc-web/dev/knitting-gauge/"><span class="name">StitchKit · Knitting Gauge</span><span class="sub">port 8089 · craft</span></a>
-    <a class="app-link a9" href="/nursecalc-web/dev/whiskey-journal/"><span class="name">DramLog · Whiskey Journal</span><span class="sub">port 8090 · spirits</span></a>
-    <a class="app-link a10" href="/nursecalc-web/dev/plant-watering/"><span class="name">LeafLog · Plant Watering</span><span class="sub">port 8091 · plants</span></a>
+    <a class="app-link a1" href="exp://100.77.30.26:8082"><span class="name">NurseCalc · IV Drip Rate</span><span class="sub">port 8082 · medical</span></a>
+    <a class="app-link a2" href="exp://100.77.30.26:8083"><span class="name">VoltCalc · Voltage Drop</span><span class="sub">port 8083 · electrical</span></a>
+    <a class="app-link a3" href="exp://100.77.30.26:8084"><span class="name">WeldCalc · Stick Welding Amps</span><span class="sub">port 8084 · welding</span></a>
+    <a class="app-link a4" href="exp://100.77.30.26:8085"><span class="name">PlumberCalc · Pipe Sizing</span><span class="sub">port 8085 · plumbing</span></a>
+    <a class="app-link a5" href="exp://100.77.30.26:8086"><span class="name">RollCall · Initiative Tracker</span><span class="sub">port 8086 · tabletop RPG</span></a>
+    <a class="app-link a6" href="exp://100.77.30.26:8087"><span class="name">BrewCalc · Brew Ratio</span><span class="sub">port 8087 · coffee</span></a>
+    <a class="app-link a7" href="exp://100.77.30.26:8088"><span class="name">FocusLens · Depth of Field</span><span class="sub">port 8088 · photography</span></a>
+    <a class="app-link a8" href="exp://100.77.30.26:8089"><span class="name">StitchKit · Knitting Gauge</span><span class="sub">port 8089 · craft</span></a>
+    <a class="app-link a9" href="exp://100.77.30.26:8090"><span class="name">DramLog · Whiskey Journal</span><span class="sub">port 8090 · spirits</span></a>
+    <a class="app-link a10" href="exp://100.77.30.26:8091"><span class="name">LeafLog · Plant Watering</span><span class="sub">port 8091 · plants</span></a>
 
-    <footer style="text-align: center;">10 apps · 10 suites · 5 categories.</footer>
+    <p class="tip">Tip: Share → Add to Home Screen for one-tap access. Tailscale must be connected.</p>
   </main>
 </body>
 </html>
